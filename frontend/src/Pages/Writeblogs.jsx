@@ -2,10 +2,10 @@ import React from 'react'
 import WriteAndUpdate from '../Components/WriteBlogs/WriteAndUpdate'
 
 
-const Writeblogs = () => {
+const Writeblogs = ({title}) => {
   return (
     <div>
-      <WriteAndUpdate/>
+      <WriteAndUpdate titleName={title}/>
     </div>
   )
 }

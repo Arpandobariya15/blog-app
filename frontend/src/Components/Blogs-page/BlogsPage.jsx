@@ -1,7 +1,8 @@
 import axios from 'axios';
 import './BlogsPage.css'
 import React, { useEffect, useState } from 'react';
-import { useParams } from 'react-router-dom';
+import { MdEditSquare } from "react-icons/md";
+import { Link, useParams } from 'react-router-dom';
 
 const BlogsPage = () => {
     const id = useParams().id;
@@ -15,10 +16,14 @@ const BlogsPage = () => {
 
     return (
         <div className='page container'>
+
             <div className='my-3'>
                 {Blog &&
                     <>
-                        <h1 className='mt-5'>{Blog.title}</h1>
+                        <Link to={`/updateBlog/${Blog._id}`} className='d-flex justify-content-end edit'>
+                            <MdEditSquare />
+                        </Link>
+                        <h1 className='mt-2'>{Blog.title}</h1>
                         <p className='blogpage mt-3'>{Blog.desc}</p>
                     </>}
 
