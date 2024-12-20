@@ -10,7 +10,7 @@ import { Link } from 'react-router-dom';
 const Header = () => {
   return (
     <div>
-      <Navbar expand="lg" className="bg-body-tertiary">
+      <Navbar expand="lg" >
         <Container >
           <Navbar.Brand href="#">BLOGS</Navbar.Brand>
           <Navbar.Toggle aria-controls="navbarScroll" />
@@ -28,6 +28,7 @@ const Header = () => {
           </Navbar.Collapse>
         </Container>
       </Navbar>
+      <hr/>
     </div>
   )
 }
